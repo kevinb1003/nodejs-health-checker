@@ -6,7 +6,7 @@ import { Dialect } from "sequelize/types";
  */
 export interface ApplicationHealthDetailed {
   name: string;
-  status: boolean;
+  overallStatus: boolean;
   version: string;
   date: Date;
   duration: number;
@@ -14,7 +14,7 @@ export interface ApplicationHealthDetailed {
 }
 // ApplicationHealthSimple used to simple return a string "OK"
 export interface ApplicationHealthSimple {
-  status: string;
+  overallStatus: string;
 }
 // Integration is the type result for requests
 export interface Integration {

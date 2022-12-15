@@ -20,7 +20,7 @@ import { checkWebIntegration } from "../services/web-service";
  */
 export function HealthcheckerSimpleCheck(): ApplicationHealthSimple {
   return {
-    status: "fully functional",
+    overallStatus: "fully functional",
   };
 }
 /**
@@ -59,7 +59,7 @@ export async function HealthcheckerDetailedCheck(config: ApplicationConfig): Pro
   return {
     name: config.name || "",
     version: config.version || "",
-    status: !integrations.some(({ status: Status }) => Status === false),
+    overallStatus: !integrations.some(({ status: Status }) => Status === false),
     date: new Date(),
     duration: getDeltaTime(start),
     integrations,
