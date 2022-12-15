@@ -49,7 +49,7 @@ var web_service_1 = require("../services/web-service");
  */
 function HealthcheckerSimpleCheck() {
     return {
-        status: "fully functional",
+        overallStatus: "fully functional",
     };
 }
 exports.HealthcheckerSimpleCheck = HealthcheckerSimpleCheck;
@@ -96,7 +96,7 @@ function HealthcheckerDetailedCheck(config) {
                     return [2 /*return*/, {
                             name: config.name || "",
                             version: config.version || "",
-                            status: !integrations.some(function (_a) {
+                            overallStatus: !integrations.some(function (_a) {
                                 var Status = _a.status;
                                 return Status === false;
                             }),

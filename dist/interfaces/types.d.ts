@@ -5,14 +5,14 @@ import { Dialect } from "sequelize/types";
  */
 export interface ApplicationHealthDetailed {
     name: string;
-    status: boolean;
+    overallStatus: boolean;
     version: string;
     date: Date;
     duration: number;
     integrations: Integration[];
 }
 export interface ApplicationHealthSimple {
-    status: string;
+    overallStatus: string;
 }
 export interface Integration {
     name: string;
